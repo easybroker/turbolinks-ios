@@ -60,7 +60,7 @@ open class Session: NSObject {
         visitVisitable(visitable, action: .Advance)
     }
 
-    fileprivate func visitVisitable(_ visitable: Visitable, action: Action) {
+    open func visitVisitable(_ visitable: Visitable, action: Action) {
         guard visitable.visitableURL != nil else { return }
 
         visitable.visitableDelegate = self
